@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Free Budget Planner 2024 - Smart Money Management Tool | Budget Pro</title>
+  <meta name="description" content="Free online budget planner to manage your finances effectively. Track expenses, savings, and investments with AI-powered insights. Mobile-friendly budget calculator with charts and analytics.">
+  <meta name="keywords" content="budget planner, expense tracker, money management, personal finance, savings calculator, budget calculator, financial planning, expense management, money tracker, budget app">
+  <meta name="author" content="Budget Pro">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Free Budget Planner 2024 - Smart Money Management Tool">
+  <meta property="og:description" content="Track your expenses, savings, and investments with our AI-powered budget planner. Free, easy to use, and mobile-friendly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:image" content="https://yourwebsite.com/images/budget-planner-og.jpg">
+  <meta property="og:site_name" content="Budget Pro">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Budget Planner 2024 - Smart Money Management Tool">
+  <meta name="twitter:description" content="Track your expenses, savings, and investments with our AI-powered budget planner.">
+  <meta name="twitter:image" content="https://yourwebsite.com/images/budget-planner-twitter.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourwebsite.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Budget Pro - Free Budget Planner",
+    "description": "Free online budget planner to manage your finances effectively with AI-powered insights",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250"
+    }
+  }
+  </script>
+  
+  <!-- Google Analytics (Replace with your tracking ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Floating Particles Background -->
+  <div class="particles" aria-hidden="true">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo">💸 Budget Pro</div>
+      <div class="nav-links">
+        <button class="nav-btn active" onclick="showTab('planner')" aria-label="Budget Planner">📊 Planner</button>
+        <button class="nav-btn" onclick="showTab('history')" aria-label="Budget History">📜 History</button>
+        <button class="nav-btn" onclick="showTab('analytics')" aria-label="Budget Analytics">📈 Analytics</button>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+    <!-- Tab 1: Budget Planner -->
+    <article id="planner-tab" class="tab-content active">
+      <header class="hero-section">
+        <h1 class="hero-title">Smart Budget Planning Made Easy</h1>
+        <p class="hero-subtitle">Take control of your finances with AI-powered insights and real-time tracking</p>
+      </header>
+
+      <div class="main-grid">
+        <!-- Left Panel -->
+        <section class="left-panel">
+          <!-- Income Card -->
+          <div class="card income-card">
+            <div class="card-header">
+              <h2>💰 Monthly Income</h2>
+              <span class="tooltip" role="tooltip" aria-label="Enter your total monthly income">
+                ℹ️<span class="tooltip-text">Enter your total monthly income</span>
+              </span>
+            </div>
+            <div class="input-wrapper">
+              <label for="income" class="sr-only">Monthly Income Amount</label>
+              <span class="currency" aria-hidden="true">₹</span>
+              <input type="number" id="income" class="income-input" placeholder="50,000" aria-label="Enter monthly income in rupees">
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <section class="quick-stats" aria-label="Quick financial statistics">
+            <div class="stat-card">
+              <div class="stat-icon" aria-hidden="true">📤</div>
+              <div class="stat-info">
+                <div class="stat-label">Total Expenses</div>
+                <div class="stat-value" id="quickExpense" aria-live="polite">₹0</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" aria-hidden="true">💎</div>
+              <div class="stat-info">
+                <div class="stat-label">Total Savings</div>
+                <div class="stat-value" id="quickSaving" aria-live="polite">₹0</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" aria-hidden="true">🎯</div>
+              <div class="stat-info">
+                <div class="stat-label">Net Balance</div>
+                <div class="stat-value" id="quickBalance" aria-live="polite">₹0</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Categories -->
+          <section class="card">
+            <div class="card-header">
+              <h3>🏠 Fixed Expenses</h3>
+              <button class="add-btn" onclick="addCategory('fixed')" aria-label="Add fixed expense">+ Add</button>
+            </div>
+            <div id="fixed-container" class="category-container" role="list"></div>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <h3>🛒 Variable Expenses</h3>
+              <button class="add-btn" onclick="addCategory('variable')" aria-label="Add variable expense">+ Add</button>
+            </div>
+            <div id="variable-container" class="category-container" role="list"></div>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <h3>💎 Savings & Investments</h3>
+              <button class="add-btn" onclick="addCategory('savings')" aria-label="Add savings category">+ Add</button>
+            </div>
+            <div id="savings-container" class="category-container" role="list"></div>
+          </section>
+
+          <button class="calculate-btn" onclick="calculateBudget()" aria-label="Calculate your budget">
+            <span class="btn-icon" aria-hidden="true">✨</span>
+            <span>Calculate Budget</span>
+            <span class="btn-shine" aria-hidden="true"></span>
+          </button>
+        </section>
+
+        <!-- Right Panel -->
+        <aside class="right-panel">
+          <!-- Budget Summary -->
+          <section class="card summary-card" id="summaryCard" style="display: none;" aria-label="Budget summary">
+            <h3 class="summary-title">Budget Summary</h3>
+            <div class="summary-item">
+              <span class="summary-label">Total Income</span>
+              <span class="summary-value income-color" id="summaryIncome" aria-live="polite">₹0</span>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="summary-item">
+              <span class="summary-label">Total Expenses</span>
+              <span class="summary-value expense-color" id="summaryExpense" aria-live="polite">₹0</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-label="Expense progress">
+              <div class="progress-fill expense-bg" id="expenseBar"></div>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="summary-item">
+              <span class="summary-label">Total Savings</span>
+              <span class="summary-value saving-color" id="summarySaving" aria-live="polite">₹0</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-label="Savings progress">
+              <div class="progress-fill saving-bg" id="savingBar"></div>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="summary-item highlight">
+              <span class="summary-label">Net Balance</span>
+              <span class="summary-value" id="summaryBalance" aria-live="polite">₹0</span>
+            </div>
+            <div id="healthBadge" class="health-badge" role="status" aria-live="polite"></div>
+          </section>
+
+          <!-- Charts -->
+          <section class="card chart-card">
+            <h3>📊 Budget Distribution</h3>
+            <div class="chart-wrapper">
+              <canvas id="pieChart" role="img" aria-label="Pie chart showing budget distribution"></canvas>
+            </div>
+          </section>
+
+          <section class="card chart-card">
+            <h3>📈 Budget Comparison</h3>
+            <div class="chart-wrapper">
+              <canvas id="barChart" role="img" aria-label="Bar chart comparing expenses, savings and balance"></canvas>
+            </div>
+          </section>
+
+          <!-- AI Insights -->
+          <section class="card insights-card" id="insightsCard" style="display: none;" aria-label="AI-powered budget insights">
+            <div class="insights-header">
+              <h3>🤖 AI-Powered Insights</h3>
+            </div>
+            <div id="insightsContent" class="insights-list" role="list"></div>
+          </section>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Tab 2: History -->
+    <article id="history-tab" class="tab-content">
+      <header class="hero-section">
+        <h1 class="hero-title">Budget History & Tracking</h1>
+        <p class="hero-subtitle">Track your budget over time and analyze spending patterns</p>
+      </header>
+      <section class="card">
+        <div class="history-header">
+          <h2>📜 Saved Budgets</h2>
+          <button class="clear-btn" onclick="clearHistory()" aria-label="Clear all budget history">🗑️ Clear All</button>
+        </div>
+        <div id="historyList" class="history-list" role="list"></div>
+      </section>
+    </article>
+
+    <!-- Tab 3: Analytics -->
+    <article id="analytics-tab" class="tab-content">
+      <header class="hero-section">
+        <h1 class="hero-title">Advanced Budget Analytics</h1>
+        <p class="hero-subtitle">Deep dive into your spending patterns and financial trends</p>
+      </header>
+      <div class="analytics-grid">
+        <section class="card">
+          <h3>📊 Monthly Trends</h3>
+          <div class="chart-wrapper">
+            <canvas id="trendChart" role="img" aria-label="Line chart showing monthly financial trends"></canvas>
+          </div>
+        </section>
+        <section class="card">
+          <h3>🎯 Category Breakdown</h3>
+          <div class="chart-wrapper">
+            <canvas id="categoryChart" role="img" aria-label="Polar chart showing category breakdown"></canvas>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer for SEO -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Budget Pro</h4>
+        <p>Free online budget planner to help you manage your finances effectively with AI-powered insights.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Features</h4>
+        <ul>
+          <li>Expense Tracking</li>
+          <li>Savings Calculator</li>
+          <li>Budget Analytics</li>
+          <li>AI Insights</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#planner">Budget Planner</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Budget Pro. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
